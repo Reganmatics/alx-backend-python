@@ -5,7 +5,7 @@ task 7. Complex types - strng and int/float to tuple
 from typing import Tuple, Union
 
 
-def to_kv(k: str, v: Union[int, float]) -> Tuple:
+def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
     """
     type-annoted function,
     args:
