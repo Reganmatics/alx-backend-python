@@ -5,7 +5,7 @@ Basic annotations - floor
 """
 
 
-def floor(n: float) -> float:
+def floor(n: float) -> int:
     """
     typed-annoted function, takes float n and returns a rounded-off value
     """
