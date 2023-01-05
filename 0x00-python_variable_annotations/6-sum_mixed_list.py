@@ -1,10 +1,11 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
 task 6. Complex types - mixed list
 """
+from typing import List, Union
 
 
-def sum_mixed_list(mxd_lst: list[int | float]) -> float:
+def sum_mixed_list(mxd_lst: List[Union[int, float]]) -> float:
     """
     type-annoted function, sums up mxd_list
     args:
