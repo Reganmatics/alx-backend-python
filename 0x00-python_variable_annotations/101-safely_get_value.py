@@ -10,7 +10,7 @@ K = TypeVar('K')
 T = TypeVar('T')
 
 
-def safely_get_value(dct: Mapping[Any, T], key: Any, default: None = None) -> \
+def safely_get_value(dct: Mapping, key: Any, default: T = None) -> \
         Union[Any, T]:
     """
     args:
