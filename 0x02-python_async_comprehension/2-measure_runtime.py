@@ -1,21 +1,18 @@
 #!/usr/bin/env python3
-"""
-Task 2. Runtiem for four parallel comprehensions
-"""
+'''Task 2's module.
+'''
 import asyncio
-from datetime import datetime
-async_comprehension = __import__('1-async_comprehension').async_comprehension
+import time
+from importlib import import_module as using
+
+
+async_comprehension = using('1-async_comprehension').async_comprehension
 
 
 async def measure_runtime() -> float:
-    """
-    args: None
-    return -> float
-    """
-    start = datetime.now()
-    await asyncio.gather(async_comprehension(), async_comprehension(),
-                         async_comprehension(), async_comprehension())
-    end = datetime.now()
-    total = (end - start).total_seconds()
-
-    return total
+    '''Executes async_comprehension 4 times and measures the
+    total execution time.
+    '''
+    start_time = time.time()
+    await asyncio.gather(*(async_comprehension() for _ in range(4)))
+    return time.time() - start_time
